@@ -16,7 +16,6 @@ class PostsController < ApplicationController
 
 	def create
 		@post = Post.new(post_params)	
-		binding.pry
 		@post.creator = current_user
 
 		if @post.save
